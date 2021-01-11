@@ -59,7 +59,7 @@ public class Controller extends HttpServlet {
 	
 	
 	private void insertBook(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
-		String title = request.getParameter(("title");
+		String title = request.getParameter("title");
 		String author = request.getParameter("author");
 		int copies = Integer.parseInt(request.getParameter("copies"));
 		
@@ -82,7 +82,7 @@ public class Controller extends HttpServlet {
 				String title = request.getParameter("title");
 				String author = request.getParameter("author");
 				int copies = Integer.parseInt(request.getParameter("copies"));
-				int available = book.getAvailable() + copies - book.getCopies());
+				int available = book.getAvailable() + copies - book.getCopies();
 				
 				book.setTitle(title);
 				book.setAuthor(author);
